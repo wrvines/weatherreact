@@ -19,6 +19,9 @@ function Weather() {
     });
     setZipcode("");
   };
+  //   React.useEffect(() => {
+  //     fetchWeather();
+  //   });
 
   // get info from input box
   const handleTextBox = (event) => {
@@ -27,7 +30,7 @@ function Weather() {
     setZipcode(event.target.value);
   };
   return (
-    <div>
+    <div className="container">
       <input
         type="number"
         placeholder="Enter Zipcode"
@@ -36,10 +39,12 @@ function Weather() {
       ></input>
       <button onClick={fetchWeather}>Submit</button>
       <div>
-        <h1>Showing Weather for {forecast.name}</h1>
-        <p>Temperature: {forecast.main.temp}&deg; F</p>
-        <p>Conditions: {forecast.weather[0].description}</p>
-        <p>Wind: {forecast.wind.speed} mph</p>
+        {/* <h1>Showing Weather for {forecast.name}</h1>
+        <p>Temperature: {forecast?.main.temp}&deg; F</p>
+        <p className="conditions">
+          Conditions: {forecast?.weather[0].description}
+        </p>
+        <p>Wind: {forecast?.wind.speed} mph</p> */}
       </div>
     </div>
   );
