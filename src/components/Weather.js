@@ -14,14 +14,12 @@ function Weather() {
   //get infor from the API
   const fetchWeather = () => {
     axios.get(url).then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setForecast(response.data);
     });
     setZipcode("");
   };
-  //   React.useEffect(() => {
-  //     fetchWeather();
-  //   });
+  // React.useEffect(() => {}, []);
 
   // get info from input box
   const handleTextBox = (event) => {
@@ -39,8 +37,8 @@ function Weather() {
       ></input>
       <button onClick={fetchWeather}>Submit</button>
       <div>
-        {/* <h1>Showing Weather for {forecast.name}</h1>
-        <p>Temperature: {forecast?.main.temp}&deg; F</p>
+        <h1>Showing Weather for {forecast?.name}</h1>
+        {/* <p>Temperature: {forecast?.main.temp}&deg; F</p>
         <p className="conditions">
           Conditions: {forecast?.weather[0].description}
         </p>
