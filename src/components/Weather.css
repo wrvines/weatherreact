@@ -1,9 +1,17 @@
 .container {
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     text-align: center;
+    width: 95vw;
+    height: 95vh;
+    margin: 1rem auto;
+}
+
+.form {
+    margin: 2rem 0 ;
 }
 
 .conditions {
