@@ -37,7 +37,9 @@ function Weather() {
         onChange={handleTextBox}
         value={zipcode}
       ></input>
-      <button onClick={fetchWeather}>Submit</button>
+      <button type="submit" onClick={fetchWeather}>
+        Submit
+      </button>
       <div>
         <h1>Showing Weather for {forecast?.name}</h1>
         <p>Temperature: {forecast?.main.temp}&deg; F</p>
